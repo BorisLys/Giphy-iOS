@@ -44,6 +44,7 @@ final class MainViewController: UIViewController {
         setupLayout()
         setupTableView()
         setupViews()
+        addAccessibilityIdentifiers()
     }
     
     private func setupViews() {
@@ -133,6 +134,11 @@ final class MainViewController: UIViewController {
         cell.configureWith(cellModel: output.cellModels()[indexPath.row])
         
         return cell
+    }
+    
+    private func addAccessibilityIdentifiers() {
+        searchBar.accessibilityIdentifier = "searchBar"
+        titleLabel.accessibilityIdentifier = "titleLabel"
     }
 }
 

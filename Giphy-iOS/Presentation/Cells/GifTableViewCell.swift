@@ -35,6 +35,7 @@ final class GifTableViewCell: CommonInitTableViewCell {
     override func setup() {
         setupViews()
         setupLayout()
+        addAccessibilityIdentifiers()
     }
     
     private func setupViews() {
@@ -128,4 +129,11 @@ final class GifTableViewCell: CommonInitTableViewCell {
             }
         )
     }
+    
+    private func addAccessibilityIdentifiers() {
+        avatarImageView.accessibilityIdentifier = "avatarImageView"
+        userNameLabel.accessibilityIdentifier = "userNameLabel"
+        gifImageView.accessibilityIdentifier = "gifImageView"
+    }
+    
 }
